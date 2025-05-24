@@ -4,28 +4,46 @@ import java.util.Scanner;
 
 public class Game{
 	
-	//getDetaisl
+	Game(){
+		System.out.println("=======Game Has Started=======");
+	}
 	
-	public void getDetails() {
+	//getDetails
+	
+	public void selectShapes() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Press 1: for 2D Shapes");
 		System.out.println("Press 1: for 2D Shapes");
 		int choice = sc.nextInt();
 		
 		switch(choice) {
-		case 1: System.out.println("You have chosen 2D Shapes");
-		selectTwoDShapes();
-		break;
+		case 1: 
+			System.out.println("You have selected 2D Shape");
+			TwoDShapes t1=selectTwoDShapes();
+			t1.getDetails();
+			t1.getArea();
+			t1.getPerimeter();
+			break;
 		
-		case 2: System.out.println("You have chosen 3D Shapes");
-		selectThreeDShapes();
-		break;
+		case 2: 
+			System.out.println("You have selected 3D Shape");
+			ThreeDShapes t2=selectThreeDShapes();
+			t2.getDetails();
+			t2.getVolume();
+			t2.getLSA();
+			t2.getTSA();
+			break;
+			
+			default : 
+				System.out.println("Invalid choice Entered!!");
+			System.out.println("Select from valid Options...");
+			selectShapes();
 		}
 	}
 	
 	//TwoDShapes
 	
-	public Shapes selectTwoDShapes() { 
+	public TwoDShapes selectTwoDShapes() { 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Press 1 for : Circle");
 		System.out.println("Press 2 for : Triangle");
@@ -36,30 +54,44 @@ public class Game{
 		
 		switch(choice) {
 		case 1 : 
-		  System.out.println("You choose Circle");
-			return new Circle();
+			System.out.println("You have Selected Circle");
+			System.out.println("Enter the radius: ");
+			double r=sc.nextDouble();
+			Circle c1=new Circle(r);
+			return c1;
 			
 		case 2 : 
-		  System.out.println("You choose Triangle");
-			new Triangle();
+			System.out.println("You have Selected Triangle");
+//			System.out.println("Enter the radius: ");
+//			double =sc.nextDouble();
+//			Circle t1=new Circle(r);
+//			return c1;
 			
 		case 3 : 
-		  System.out.println("You choose Square");
-          new Square();
+			System.out.println("You have Selected Square");
+			System.out.println("Enter the side: ");
+			double side=sc.nextDouble();
+			Square s1=new Square(side);
+			return s1;
 			
 		case 4 :
-		  System.out.println("You choose Rectangle");
-			new Rectangle();
+			System.out.println("You have Selected Rectangle");
+			System.out.println("Enter the height: ");
+			double hei=sc.nextDouble();
+			System.out.println("Enter the width: ");
+			double wid=sc.nextDouble();
+			Rectangle r1=new Rectangle(hei,wid);
+			return r1;
 			
 		default :  
-			System.out.println("You have Choose invalid option ");
-			return null;
+			System.out.println("Invalid choice Entered!!");
+			return selectTwoDShapes();
 		 }
 	}
 	
 	// ThreeDShapes
 	
-	public Shapes selectThreeDShapes() { 
+	public ThreeDShapes selectThreeDShapes() { 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Press 1 for : Cylinder");
 		System.out.println("Press 2 for : Sphere");
@@ -70,24 +102,40 @@ public class Game{
 		
 		switch(choice) {
 		case 1 : 
-		  System.out.println("You choose Cylinder");
-			return new Cylinder();
+			System.out.println("You have Selected Cylinder");
+//			System.out.println("Enter the radius: ");
+//			double r=sc.nextDouble();
+//			System.out.println("Enter the height: ");
+//			double h=sc.nextDouble();
+//			return new Cylinder(r,h);
 			
 		case 2 : 
-		  System.out.println("You choose Sphere");
-          return new Sphere();
+			System.out.println("You have Selected Sphere");
+//			System.out.println("Enter the radius: ");
+//			double r=sc.nextDouble();
+//			System.out.println("Enter the height: ");
+//			double h=sc.nextDouble();
+//			return new Cylinder(r,h);
 			
 		case 3 : 
-		  System.out.println("You choose Cube");
-			return new Cube();
+			System.out.println("You have Selected Cube");
+//			System.out.println("Enter the radius: ");
+//			double r=sc.nextDouble();
+//			System.out.println("Enter the height: ");
+//			double h=sc.nextDouble();
+//			return new Cylinder(r,h);
 			
 		case 4 :
-		  System.out.println("You choose Cuboid");
-			return new Cuboid();
+			System.out.println("You have Selected Cuboid");
+//			System.out.println("Enter the radius: ");
+//			double r=sc.nextDouble();
+//			System.out.println("Enter the height: ");
+//			double h=sc.nextDouble();
+//			return new Cylinder(r,h);
 			
 		default :  
-			System.out.println("You have Choose invalid option ");
-			return null;
+			System.out.println("Invalid choice Entered!!");
+			return selectThreeDShapes();	
 		 }
 	}
 		

@@ -1,6 +1,6 @@
 package ProjectShapes;
 
-public class Circle extends TwoDShapes {
+public class Circle implements TwoDShapes {
 	
 	double r;
 
@@ -15,17 +15,17 @@ public class Circle extends TwoDShapes {
 	
 	@Override
 	public void getDetails() {
-		System.out.println("This is a circle");
+		System.out.println("Radius of Circle is: " +r+" unit");
 	}
 	
 	@Override
 	public void getArea() {
-		System.out.println("The Area of Circle is " + Math.PI*r*r);
+		System.out.println("Area of Circle is " + Math.PI*r*r +" Sq. Unit");
 	}
 	
 	@Override
 	public void getPerimeter() {
-		System.out.println("The Perimeter of Circle is " + 2*Math.PI*r);
+		System.out.println("The Perimeter of Circle is " + 2*Math.PI*r +" Unit");
 	}
 
 }

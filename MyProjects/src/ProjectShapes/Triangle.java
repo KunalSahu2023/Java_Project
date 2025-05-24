@@ -1,6 +1,6 @@
 package ProjectShapes;
 
-public class Triangle extends TwoDShapes{
+public class Triangle implements TwoDShapes{
 	
 	double base, hei;
 	int a,b,c;
@@ -13,6 +13,12 @@ public class Triangle extends TwoDShapes{
 		this.a=a;
 		this.b=b;
 		this.c=c;
+	}
+	
+	@Override
+	
+	public void getDetails() {
+		System.out.println("The Base, height, a,b,c is: " + base + hei + a + b + c);
 	}
 
 	@Override
