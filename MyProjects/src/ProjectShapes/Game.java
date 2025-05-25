@@ -13,7 +13,7 @@ public class Game{
 	public void selectShapes() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Press 1: for 2D Shapes");
-		System.out.println("Press 1: for 2D Shapes");
+		System.out.println("Press 1: for 3D Shapes");
 		int choice = sc.nextInt();
 		
 		switch(choice) {
@@ -62,10 +62,18 @@ public class Game{
 			
 		case 2 : 
 			System.out.println("You have Selected Triangle");
-//			System.out.println("Enter the radius: ");
-//			double =sc.nextDouble();
-//			Circle t1=new Circle(r);
-//			return c1;
+			System.out.println("Enter the base: ");
+			double base =sc.nextDouble();
+			System.out.println("Enter the Height is: ");
+			double hei =sc.nextDouble();
+			System.out.println("Enter a: ");
+			int a=sc.nextInt();
+			System.out.println("Enter b: ");
+			int b=sc.nextInt();
+			System.out.println("Enter c: ");
+			int c=sc.nextInt();
+			Triangle t1=new Triangle(base,hei,a,b,c);
+			return t1;
 			
 		case 3 : 
 			System.out.println("You have Selected Square");
@@ -77,10 +85,10 @@ public class Game{
 		case 4 :
 			System.out.println("You have Selected Rectangle");
 			System.out.println("Enter the height: ");
-			double hei=sc.nextDouble();
+			double len=sc.nextDouble();
 			System.out.println("Enter the width: ");
 			double wid=sc.nextDouble();
-			Rectangle r1=new Rectangle(hei,wid);
+			Rectangle r1=new Rectangle(len,wid);
 			return r1;
 			
 		default :  
@@ -103,35 +111,33 @@ public class Game{
 		switch(choice) {
 		case 1 : 
 			System.out.println("You have Selected Cylinder");
-//			System.out.println("Enter the radius: ");
-//			double r=sc.nextDouble();
-//			System.out.println("Enter the height: ");
-//			double h=sc.nextDouble();
-//			return new Cylinder(r,h);
+			System.out.println("Enter the radius: ");
+			double r=sc.nextDouble();
+			System.out.println("Enter the height: ");
+			double h=sc.nextDouble();
+			return new Cylinder(r,h);
 			
 		case 2 : 
 			System.out.println("You have Selected Sphere");
-//			System.out.println("Enter the radius: ");
-//			double r=sc.nextDouble();
-//			System.out.println("Enter the height: ");
-//			double h=sc.nextDouble();
-//			return new Cylinder(r,h);
+			System.out.println("Enter the radius: ");
+			double radi=sc.nextDouble();
+			return new Sphere(radi);
 			
 		case 3 : 
 			System.out.println("You have Selected Cube");
-//			System.out.println("Enter the radius: ");
-//			double r=sc.nextDouble();
-//			System.out.println("Enter the height: ");
-//			double h=sc.nextDouble();
-//			return new Cylinder(r,h);
+			System.out.println("Enter a: ");
+			double a=sc.nextDouble();
+			return new Cube(a);
 			
 		case 4 :
 			System.out.println("You have Selected Cuboid");
-//			System.out.println("Enter the radius: ");
-//			double r=sc.nextDouble();
-//			System.out.println("Enter the height: ");
-//			double h=sc.nextDouble();
-//			return new Cylinder(r,h);
+			System.out.println("Enter the Length: ");
+			double len=sc.nextDouble();
+			System.out.println("Enter the height: ");
+			double bre=sc.nextDouble();
+			System.out.println("Enter the Width: ");
+			double hei=sc.nextDouble();
+			return new Cuboid(len,bre,hei);
 			
 		default :  
 			System.out.println("Invalid choice Entered!!");

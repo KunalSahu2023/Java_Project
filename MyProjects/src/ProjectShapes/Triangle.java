@@ -7,7 +7,7 @@ public class Triangle implements TwoDShapes{
 	
 	Triangle(){}
 	
-	Triangle(double base, double hei, int a, int b, int c){
+	Triangle(double base, double hei,int a, int b, int c){
 		this.base=base;
 		this.hei=hei;
 		this.a=a;
@@ -23,11 +23,11 @@ public class Triangle implements TwoDShapes{
 
 	@Override
 	public void getArea() {
-		System.out.println("The Area of Triangle is:" +0.5*hei*base);
+		System.out.println("The Area of Triangle is:" +0.5*hei*base+" Sq.Unit");
 	}
 	
 	@Override
 	public void getPerimeter() {
-		System.out.println("The Perimeter of Rectangle is:" +a+b+c);
+		System.out.println("The Perimeter of Rectangle is:" +a+b+c+" Uuit");
 	}
 }
