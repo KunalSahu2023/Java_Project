@@ -1,8 +1,6 @@
 package VendingMachineProject;
 
-public class Wine implements Baverage{
+public interface Wine extends Baverage {
 	
-	public void drink() {
-		System.out.println("You have Ordered Wine");
-	}
+	public void menu();
 }

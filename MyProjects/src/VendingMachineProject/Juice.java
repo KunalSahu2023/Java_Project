@@ -1,8 +1,6 @@
 package VendingMachineProject;
 
-public class Juice implements Baverage {
+public interface Juice extends Baverage {
 	
-	public void drink() {
-		System.out.println("You have Ordered Juice");
-	}
+	public void menu();
 }

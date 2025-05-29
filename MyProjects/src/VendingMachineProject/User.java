@@ -9,12 +9,12 @@ public class User {
 		Scanner sc = new Scanner(System.in);
 		char c; 
 		do {
-		Baverage b = v.selectBaverage();
-		b.drink();
-		System.out.println("Press Y or y to Continue....");
+			v.selectBaverage();
+		System.out.println("Do you want to taste another drink....");
+		System.out.println("yes or no?");
 		c=sc.next().charAt(0);
 		}while(c=='Y'||c=='y');
-		System.out.println("======Thank you for order!!====");
+		System.out.println("======Thank you for Visiting!!====");
 	
 }
 
