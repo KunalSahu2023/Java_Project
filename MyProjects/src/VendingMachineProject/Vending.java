@@ -23,14 +23,17 @@ public class Vending {
 		switch(choice){
 			case 1: System.out.println("You have choosed Coffee Menu");
 				Coffee c1= selectCoffee();
+				c1.detail();
 				c1.menu();
 				break;
 			case 2: System.out.println("You have choosed Juice Menu");
 				Juice j1= selectJuice();
+				j1.detail();
 				j1.menu();
 				break;
 			case 3: System.out.println("You have choosed Wine Menu");
 				Wine w1=selectWine();
+				w1.detail();
 				w1.menu();
 				break;
 				

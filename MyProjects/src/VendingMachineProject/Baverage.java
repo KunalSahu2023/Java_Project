@@ -2,5 +2,5 @@ package VendingMachineProject;
 
 public interface Baverage {
 	
-	public void drink();
+	public void detail();
 }
